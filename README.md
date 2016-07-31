@@ -10,7 +10,7 @@ Usage
  
 Templates
 ---------
- 1. [ProjectTemplates](https://github.com/GitSmark/AndroidStudioTemplates/blob/master/Download/ProjectTemplatesV1.0.160371.rar)
+ 1. [ProjectTemplates](https://github.com/GitSmark/AndroidStudioTemplates/raw/master/Download/ProjectTemplatesV1.0.160371.rar)
 
  * [Live Templates](https://github.com/GitSmark/AndroidStudioTemplates/blob/master/LiveTemplates.md)
  
