@@ -52,6 +52,8 @@
             to="${escapeXmlAttribute(resOut)}/drawable-xhdpi" />
     <copy from="res/drawable-xxhdpi"
             to="${escapeXmlAttribute(resOut)}/drawable-xxhdpi" />
+    <copy from="res/drawable-xxxhdpi"
+            to="${escapeXmlAttribute(resOut)}/drawable-xxxhdpi" />
     <copy from="res/drawable"
             to="${escapeXmlAttribute(resOut)}/drawable" />
 

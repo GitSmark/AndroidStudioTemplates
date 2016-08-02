@@ -9,7 +9,7 @@ import ${packageName}.R;
  * Created by huangxy on 2016/7/28.
  * https://github.com/GitSmark/AndroidStudioTemplates
  */
-public class MainActivity extends AbstractActivity {
+public class ${activityClass} extends AbstractActivity {
 
     @Override
     protected int getLayoutResId() {
