@@ -161,3 +161,7 @@ public class ${NAME} implements Serializable {
 
 </LinearLayout>
 ```
+
+Keymap
+------
+![](https://github.com/GitSmark/AndroidStudioTemplates/blob/master/LiveTemplates.png)
