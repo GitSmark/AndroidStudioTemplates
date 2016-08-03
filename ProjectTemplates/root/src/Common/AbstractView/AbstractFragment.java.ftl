@@ -8,8 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-
 <#if ButterKnife>
+
 import butterknife.ButterKnife;
 </#if>
 
@@ -69,6 +69,22 @@ public abstract class AbstractFragment extends Fragment implements OnClickListen
     protected <T extends View> T $click(View v, int Resid) {
         T t = (T) v.findViewById(Resid);
         try {t.setOnClickListener(this);
+        }catch (Exception e){}
+        return t;
+    }
+
+    @SuppressWarnings("uncheckedz")
+    protected <T extends View> T $onClick(int Resid, OnClickListener listener) {
+        T t = (T) view.findViewById(Resid);
+        try {t.setOnClickListener(listener);
+        }catch (Exception e){}
+        return t;
+    }
+
+    @SuppressWarnings("uncheckedz")
+    protected <T extends View> T $onClick(View v, int Resid, OnClickListener listener) {
+        T t = (T) v.findViewById(Resid);
+        try {t.setOnClickListener(listener);
         }catch (Exception e){}
         return t;
     }

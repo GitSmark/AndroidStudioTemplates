@@ -7,8 +7,8 @@ import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
 import java.util.List;
-
 <#if ButterKnife>
+
 import butterknife.ButterKnife;
 </#if>
 

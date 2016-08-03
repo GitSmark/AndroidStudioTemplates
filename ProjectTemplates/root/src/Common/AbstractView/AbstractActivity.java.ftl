@@ -5,12 +5,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.TextView;
-
 <#if ImmersiveBar == "true">
+
 import ${packageName}.Application.App;
 </#if>
-
 <#if ButterKnife>
+
 import butterknife.ButterKnife;
 </#if>
 
@@ -66,6 +66,22 @@ public abstract class AbstractActivity extends Activity implements OnClickListen
     protected <T extends View> T $click(View v, int Resid) {
         T t = (T) v.findViewById(Resid);
         try {t.setOnClickListener(this);
+        }catch (Exception e){}
+        return t;
+    }
+
+    @SuppressWarnings("uncheckedz")
+    protected <T extends View> T $onClick(int Resid, OnClickListener listener) {
+        T t = (T) findViewById(Resid);
+        try {t.setOnClickListener(listener);
+        }catch (Exception e){}
+        return t;
+    }
+
+    @SuppressWarnings("uncheckedz")
+    protected <T extends View> T $onClick(View v, int Resid, OnClickListener listener) {
+        T t = (T) v.findViewById(Resid);
+        try {t.setOnClickListener(listener);
         }catch (Exception e){}
         return t;
     }
