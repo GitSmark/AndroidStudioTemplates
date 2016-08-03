@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<template
+    format="1"
+    revision="1"
+    minApi="11"
+    minBuildApi="11"
+    name="CommonAdapter"
+    description="Creates a new common adapter">
+
+    <category value="Activity" />
+    <formfactor value="Mobile" />
+
+    <parameter
+        id="activityClass"
+        name="Adapter Name"
+        type="string"
+        constraints="class|nonempty"
+        default=""
+        help="The name of the commonadapter class to create" />
+
+    <parameter
+        id="adapterType"
+        name="Adapter Type"
+        type="enum"
+        default="CommonAdapter"
+        help="Choose the commonadapter type what your needs" >
+        <option id="CommonAdapter">CommonAdapter</option>
+        <option id="CommonRcvAdapter">CommonRcvAdapter</option>
+        <option id="CommonPagerAdapter">CommonPagerAdapter</option>
+    </parameter>
+
+    <parameter
+        id="adapterItemClass"
+        name="AdapterItem Name"
+        type="string"
+        constraints="class|nonempty"
+        suggest="${activityClass}"
+        default=""
+        help="The name of the adapteritem class to create" />
+
+    <parameter
+        id="adapterItemEntity"
+        name="AdapterItem Entity"
+        type="string"
+        default=""
+        help="The entity of the adapteritem class to create, can be empty" />
+
+    <parameter
+        id="layoutName"
+        name="AdapterItem Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        default=""
+        help="The name of the layout to create for the adapteritem" />
+
+    <parameter
+        id="itemListener"
+        name="ListItemCallBack"
+        type="boolean"
+        default="false"
+        help="If true, listitemcallback will create into the commonadapter" />
+
+    <parameter
+        id="isFirst"
+        name="Create Resources"
+        type="boolean"
+        default="false"
+        help="If true, resources will create into the module" />
+    
+    <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.mycompany.myapp" />
+
+    <!-- 128x128 thumbnails relative to template.xml -->
+    <thumbs>
+        <!-- default thumbnail is required -->
+        <thumb>template_Git@Smark.png</thumb>
+        <!-- attributes act as selectors based on chosen parameters -->
+        <thumb isFirst="false">template_commonadapter.png</thumb>
+        <thumb isFirst="true">template_commonadapter.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
