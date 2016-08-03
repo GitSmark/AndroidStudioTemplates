@@ -39,10 +39,10 @@
     <merge from="AndroidManifest.xml.ftl"
             to="${escapeXmlAttribute(manifestOut)}/AndroidManifest.xml" />
     <instantiate from="res/layout/activity_interior.xml.ftl"
-            to="${escapeXmlAttribute(resOut)}/layout/${layoutName}.xml" />
-    <open file="${escapeXmlAttribute(resOut)}/layout/${layoutName}.xml" />
+            to="${escapeXmlAttribute(resOut)}/layout/activity_${layoutName}.xml" />
+    <open file="${escapeXmlAttribute(resOut)}/layout/activity_${layoutName}.xml" />
     <instantiate from="src/Activity/InteriorActivity.java.ftl"
-            to="${escapeXmlAttribute(srcOut)}/${activityClass}.java" />
-    <open file="${escapeXmlAttribute(srcOut)}/${activityClass}.java" />
+            to="${escapeXmlAttribute(srcOut)}/${activityClass}Activity.java" />
+    <open file="${escapeXmlAttribute(srcOut)}/${activityClass}Activity.java" />
 
 </recipe>

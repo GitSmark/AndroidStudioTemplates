@@ -64,6 +64,22 @@ public abstract class AbstractFragment extends Fragment implements OnClickListen
         return t;
     }
 
+    @SuppressWarnings("uncheckedz")
+    protected <T extends View> T $onClick(int Resid, OnClickListener listener) {
+        T t = (T) view.findViewById(Resid);
+        try {t.setOnClickListener(listener);
+        }catch (Exception e){}
+        return t;
+    }
+
+    @SuppressWarnings("uncheckedz")
+    protected <T extends View> T $onClick(View v, int Resid, OnClickListener listener) {
+        T t = (T) v.findViewById(Resid);
+        try {t.setOnClickListener(listener);
+        }catch (Exception e){}
+        return t;
+    }
+
     public void beforeInitView() {}
     public void getData() {}
     public void Other() {}

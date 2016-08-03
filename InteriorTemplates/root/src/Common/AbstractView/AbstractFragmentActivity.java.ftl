@@ -52,6 +52,22 @@ public abstract class AbstractFragmentActivity extends FragmentActivity implemen
         return t;
     }
 
+    @SuppressWarnings("uncheckedz")
+    protected <T extends View> T $onClick(int Resid, OnClickListener listener) {
+        T t = (T) findViewById(Resid);
+        try {t.setOnClickListener(listener);
+        }catch (Exception e){}
+        return t;
+    }
+
+    @SuppressWarnings("uncheckedz")
+    protected <T extends View> T $onClick(View v, int Resid, OnClickListener listener) {
+        T t = (T) v.findViewById(Resid);
+        try {t.setOnClickListener(listener);
+        }catch (Exception e){}
+        return t;
+    }
+
     protected void $Title(int id, String text){
         try {
             TextView tv = (TextView) findViewById(id);

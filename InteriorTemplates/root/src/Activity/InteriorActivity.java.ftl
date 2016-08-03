@@ -6,11 +6,11 @@ import android.view.View;
  * Created by huangxy on 2016/8/1.
  * https://github.com/GitSmark/AndroidStudioTemplates
  */
-public class ${activityClass} extends AbstractActivity {
+public class ${activityClass}Activity extends AbstractActivity {
 
     @Override
     protected int getLayoutResId() {
-        return R.layout.${layoutName};
+        return R.layout.activity_${layoutName};
     }
 
     @Override
