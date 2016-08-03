@@ -7,8 +7,8 @@ Plugins
 * Android ButterKnife Zelezny
 * Android Material Design Icon Generator
 * JSONOnlineViewer
-* CodeGlance
 * GsonFormat
+* CodeGlance
 
 File Templates
 --------------
@@ -96,6 +96,44 @@ public class ${NAME} extends CommonAdapter {
 }
 ```
 
+* AdapterItem
+```java
+#if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
+
+import android.view.View;
+
+/**
+ * Created by huangxy on ${DATE}.
+ * https://github.com/GitSmark/AndroidStudioTemplates
+ */
+#if (${ENTITY} && ${ENTITY} != "")
+public class ${NAME} implements AdapterItem<${ENTITY}> {
+#else
+public class ${NAME} implements AdapterItem {
+#end
+ 
+    @Override
+    public int getLayoutResId() {
+        return 0;
+    }
+
+    @Override
+    public void onBindViews(View root) {
+
+    }
+
+    @Override
+    public void onUpdateViews(#if (${ENTITY} && ${ENTITY} != "")${ENTITY} #else Object #end model, int position) {
+
+    }
+
+    @Override
+    public void onItemAction(int position) {
+
+    }
+}
+```
+
 * SerialEntity
 ```java
 #if (${PACKAGE_NAME} && ${PACKAGE_NAME} != "")package ${PACKAGE_NAME};#end
@@ -111,4 +149,15 @@ public class ${NAME} implements Serializable {
     private static final long serialVersionUID = 7725${YEAR}${MONTH}${DAY}${HOUR}${MINUTE}322L;
     
 }
+```
+
+* InteriorXml
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/AppActivityStyle">
+
+    <include layout="@layout/layout_header2" />
+
+</LinearLayout>
 ```
