@@ -4,6 +4,10 @@ import android.support.annotation.NonNull;
 
 import java.util.List;
 
+import ${packageName}.Common.CommonAdapter.AdapterItem;
+import ${packageName}.Common.CommonAdapter.CommonAdapter;
+import ${packageName}.View.Demo_ListItem;
+
 /**
  * Created by huangxy on 2016/8/3.
  * https://github.com/GitSmark/AndroidStudioTemplates

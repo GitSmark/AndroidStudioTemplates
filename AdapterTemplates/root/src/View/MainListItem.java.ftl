@@ -2,6 +2,10 @@ package ${packageName}.View;
 
 import android.view.View;
 
+import ${packageName}.Common.CommonAdapter.AdapterItem;
+import ${packageName}.Interface.ListItemCallBack;
+import ${packageName}.R;
+
 /**
  * Created by huangxy on 2016/8/3.
  * https://github.com/GitSmark/AndroidStudioTemplates

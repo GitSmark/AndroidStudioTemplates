@@ -12,7 +12,7 @@
 
     <parameter
         id="activityClass"
-        name="Adapter Name"
+        name="Adapter Name(*Adapter)"
         type="string"
         constraints="class|nonempty"
         default=""
@@ -31,7 +31,7 @@
 
     <parameter
         id="adapterItemClass"
-        name="AdapterItem Name"
+        name="AdapterItem Name($_ListItem)"
         type="string"
         constraints="class|nonempty"
         suggest="${activityClass}"
@@ -47,7 +47,7 @@
 
     <parameter
         id="layoutName"
-        name="AdapterItem Layout Name"
+        name="AdapterItem Layout Name($_listitem)"
         type="string"
         constraints="layout|unique|nonempty"
         default=""
