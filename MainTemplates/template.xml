@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<template
+    format="1"
+    revision="1"
+    minApi="11"
+    minBuildApi="11"
+    name="MainActivity"
+    description="Creates a new tab MainActivity">
+
+    <category value="Activity" />
+    <formfactor value="Mobile" />
+
+    <parameter
+        id="activityClass"
+        name="Activity Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        suggest="${layoutToActivity(layoutName)}"
+        default="MainActivity"
+        help="The name of the activity class to create" />
+
+    <parameter
+        id="layoutName"
+        name="Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        suggest="${activityToLayout(activityClass)}"
+        default="activity_main"
+        help="The name of the layout to create for the activity" />
+
+    <parameter
+        id="fragmentClass"
+        name="Tab Name"
+        type="string"
+        constraints="class|unique|nonempty"
+        default="Page_Fragment"
+        help="The name of the tab fragment class to create" />
+
+    <parameter
+        id="fragmentName"
+        name="Layout Name"
+        type="string"
+        constraints="layout|unique|nonempty"
+        default="fragment_page"
+        help="The name of the tab layout to create for the fragment" />
+
+    <parameter
+        id="tabStyle"
+        name="Tab Style"
+        type="enum"
+        default="normal"
+        help="Choose the tab style what your needs" >
+        <option id="normal">Normal Style.</option>
+        <option id="fill">Fill Style.</option>
+    </parameter>
+
+    <parameter
+        id="tabCount"
+        name="Tab Count"
+        type="enum"
+        default="4"
+        help="Choose the tab count what your needs" >
+        <option id="3">3</option>
+        <option id="4">4</option>
+        <option id="4">5</option>
+    </parameter>
+
+    <parameter
+        id="isFirst"
+        name="Create Resources"
+        type="boolean"
+        default="false"
+        help="If true, resources will create into the module" />
+    
+    <parameter
+        id="packageName"
+        name="Package name"
+        type="string"
+        constraints="package"
+        default="com.mycompany.myapp" />
+
+    <!-- 128x128 thumbnails relative to template.xml -->
+    <thumbs>
+        <!-- default thumbnail is required -->
+        <thumb>template_Git@Smark.png</thumb>
+        <!-- attributes act as selectors based on chosen parameters -->
+        <thumb tabStyle="normal">template_normal.png</thumb>
+        <thumb tabStyle="fill">template_fill.png</thumb>
+    </thumbs>
+
+    <globals file="globals.xml.ftl" />
+    <execute file="recipe.xml.ftl" />
+
+</template>
