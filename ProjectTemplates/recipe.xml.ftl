@@ -52,8 +52,6 @@
             to="${escapeXmlAttribute(resOut)}/drawable-xhdpi" />
     <copy from="res/drawable-xxhdpi"
             to="${escapeXmlAttribute(resOut)}/drawable-xxhdpi" />
-    <copy from="res/drawable-xxxhdpi"
-            to="${escapeXmlAttribute(resOut)}/drawable-xxxhdpi" />
     <copy from="res/drawable"
             to="${escapeXmlAttribute(resOut)}/drawable" />
 
@@ -95,6 +93,8 @@
             to="${escapeXmlAttribute(srcOut)}/Interface/ListItemCallBack.java" />
     <instantiate from="src/Utils/DensityUtils.java.ftl"
             to="${escapeXmlAttribute(srcOut)}/Utils/DensityUtils.java" />
+    <instantiate from="src/Utils/DrawableUtils.java.ftl"
+            to="${escapeXmlAttribute(srcOut)}/Utils/DrawableUtils.java" />
     <instantiate from="src/Utils/FileUtils.java.ftl"
             to="${escapeXmlAttribute(srcOut)}/Utils/FileUtils.java" />
     <instantiate from="src/Utils/GlideRoundBitmap.java.ftl"
