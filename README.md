@@ -24,8 +24,11 @@ Warning
 Templates
 ---------
  1. [ProjectTemplates](https://github.com/GitSmark/AndroidStudioTemplates/raw/master/Download/ProjectTemplatesV1.0.3.160804.rar)
+ 
  2. [InteriorTemplates](https://github.com/GitSmark/AndroidStudioTemplates/raw/master/Download/InteriorTemplatesV1.0.2.160804.rar)
+ 
  3. [AdapterTemplates](https://github.com/GitSmark/AndroidStudioTemplates/raw/master/Download/AdapterTemplatesV1.0.1.160804.rar)
+ 
  4. [MainTemplates](https://github.com/GitSmark/AndroidStudioTemplates/raw/master/Download/MainTemplatesV1.0.0.160804.rar)
 
  * [Live Templates](https://github.com/GitSmark/AndroidStudioTemplates/blob/master/LiveTemplates.md)
