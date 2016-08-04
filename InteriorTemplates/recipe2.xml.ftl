@@ -2,6 +2,7 @@
 <recipe>
 
     <#if isFirst>
+
 	<mkdir at="${escapeXmlAttribute(srcOut)}/Activity" />
     <mkdir at="${escapeXmlAttribute(srcOut)}/Common" />
     <mkdir at="${escapeXmlAttribute(srcOut)}/Common/AbstractView" />
@@ -24,8 +25,15 @@
     <copy from="res/drawable-xxxhdpi"
             to="${escapeXmlAttribute(resOut)}/drawable-xxxhdpi" />
 
+    <instantiate from="src/Common/AbstractView/AbstractFragmentActivity.java.ftl"
+            to="${escapeXmlAttribute(srcOut)}/Common/AbstractView/AbstractFragmentActivity.java" />
+    <instantiate from="src/Common/AbstractView/AbstractActivity.java.ftl"
+            to="${escapeXmlAttribute(srcOut)}/Common/AbstractView/AbstractActivity.java" />
+    <instantiate from="src/Common/AbstractView/AbstractFragment.java.ftl"
+            to="${escapeXmlAttribute(srcOut)}/Common/AbstractView/AbstractFragment.java" />
     <instantiate from="res/layout/layout_header2.xml.ftl"
             to="${escapeXmlAttribute(resOut)}/layout/layout_header2.xml" />
+
     </#if>
 
     <merge from="AndroidManifest.xml.ftl"

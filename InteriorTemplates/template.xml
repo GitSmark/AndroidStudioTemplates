@@ -12,7 +12,7 @@
 
     <parameter
         id="activityClass"
-        name="Activity Name"
+        name="Activity Name(*Activity)"
         type="string"
         constraints="class|unique|nonempty"
         default=""
@@ -20,18 +20,11 @@
 
     <parameter
         id="layoutName"
-        name="Layout Name"
+        name="Layout Name(activity_$)"
         type="string"
         constraints="layout|unique|nonempty"
         default=""
         help="The name of the layout to create for the activity" />
-
-    <parameter
-        id="isLauncher"
-        name="Launcher Activity"
-        type="boolean"
-        default="false"
-        help="If true, this activity will have a CATEGORY_LAUNCHER intent filter, making it visible in the launcher" />
 
     <parameter
         id="isFirst"
@@ -52,8 +45,8 @@
         <!-- default thumbnail is required -->
         <thumb>template_Git@Smark.png</thumb>
         <!-- attributes act as selectors based on chosen parameters -->
-        <thumb isLauncher="false">template_interior_activity.png</thumb>
-        <thumb isLauncher="true">template_interior_activity.png</thumb>
+        <thumb isFirst="false">template_interior_activity.png</thumb>
+        <thumb isFirst="true">template_interior_activity.png</thumb>
     </thumbs>
 
     <globals file="globals.xml.ftl" />

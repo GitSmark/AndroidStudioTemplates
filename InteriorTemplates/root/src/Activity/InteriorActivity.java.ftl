@@ -1,6 +1,9 @@
-package ${packageName};
+package ${packageName}.Activity;
 
 import android.view.View;
+
+import ${packageName}.Common.AbstractView.AbstractActivity;
+import ${packageName}.R;
 
 /**
  * Created by huangxy on 2016/8/1.
