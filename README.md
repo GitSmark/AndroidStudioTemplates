@@ -10,16 +10,23 @@ Usage
  
 Warning
 ---------
- * All Templates are based on `ProjectTemplates`.
- * If you don't want use ProjectTemplates, you must choosed `Create Resources` in first time.
+ 1. All Templates are based on `ProjectTemplates`. If you don't want use ProjectTemplates, 
+    you must modified into “recipe2.xml.ftl” in `Templates/template.xml`.
+ ```xml
+  <globals file="globals.xml.ftl" />
+  <execute file="recipe.xml.ftl" />
+ ```
+ 
+ 2. Use all Templates other than ProjectTemplates, you must choosed `Create Resources` in first time.
  
  ![](https://github.com/GitSmark/AndroidStudioTemplates/blob/master/README.png)
 
 Templates
 ---------
- 1. [ProjectTemplates](https://github.com/GitSmark/AndroidStudioTemplates/raw/master/Download/ProjectTemplatesV1.0.2.160803.rar)
- 2. [InteriorTemplates](https://github.com/GitSmark/AndroidStudioTemplates/raw/master/Download/InteriorTemplatesV1.0.1.160803.rar)
- 3. [AdapterTemplates](https://github.com/GitSmark/AndroidStudioTemplates/raw/master/Download/AdapterTemplatesV1.0.0.160803.rar) [package]
+ 1. [ProjectTemplates](https://github.com/GitSmark/AndroidStudioTemplates/raw/master/Download/ProjectTemplatesV1.0.3.160804.rar)
+ 2. [InteriorTemplates](https://github.com/GitSmark/AndroidStudioTemplates/raw/master/Download/InteriorTemplatesV1.0.2.160804.rar)
+ 3. [AdapterTemplates](https://github.com/GitSmark/AndroidStudioTemplates/raw/master/Download/AdapterTemplatesV1.0.1.160804.rar)
+ 4. [MainTemplates](https://github.com/GitSmark/AndroidStudioTemplates/raw/master/Download/MainTemplatesV1.0.0.160804.rar)
 
  * [Live Templates](https://github.com/GitSmark/AndroidStudioTemplates/blob/master/LiveTemplates.md)
  
